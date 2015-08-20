@@ -24,7 +24,11 @@ public class Math
             
             sub3 = no1 - no2;
             
-            System.out.println( no1 + "+" + no2 + "=" + sub3);
+            System.out.println( no1 + "-" + no2 + "=" + sub3);
+            
+            sub4 = no2 - no1;
+            
+            System.out.println( no2 + "-" + no1 + "=" + sub3);
             
          
             
