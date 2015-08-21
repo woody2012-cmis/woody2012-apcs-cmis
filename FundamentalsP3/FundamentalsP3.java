@@ -1,33 +1,32 @@
-
-/**
- * Write a description of class FundamentalsP3 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import javax.swing.JOptionPane;
 public class FundamentalsP3
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class FundamentalsP3
-     */
-    public FundamentalsP3()
     {
-        // initialise instance variables
-        x = 0;
-    }
+     public static void main( String[] args )
+        { 
+          
+           
+           String input = JOptionPane.showInputDialog ( "What's your number ?" );
+           Double x = Double.parseDouble (input);
+            
+            
+     
+           double r = x%2;
+           
+           
+               
+           if( r == 1 )
+                {
+                System.out.println( "The value of " + input +  "is an even number." );
+                }
+           else
+                {
+                System.out.println( "The value of " + input + " is an odd number." );
+                }
+            
+                
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
-}
+                
+            
+            } 
+        }
+   
