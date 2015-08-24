@@ -5,7 +5,7 @@ public class FundamentalsP3
         { 
           
            
-           String input = JOptionPane.showInputDialog ( "What's your number ?" );
+           String input = JOptionPane.showInputDialog ( "Give me a number." );
            Double x = Double.parseDouble (input);
             
             
@@ -16,11 +16,11 @@ public class FundamentalsP3
                
            if( r == 1 )
                 {
-                System.out.println( "The value of " + input +  "is an even number." );
+                System.out.println( "The value of " + input +  " is an odd number." );
                 }
            else
                 {
-                System.out.println( "The value of " + input + " is an odd number." );
+                System.out.println( "The value of " + input + " is an even number." );
                 }
             
                 
