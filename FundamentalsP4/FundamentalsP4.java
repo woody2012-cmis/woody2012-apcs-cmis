@@ -2,11 +2,11 @@
 public class FundamentalsP4
     {
      public static void main( String[] args )
-        { 
+        {
         
-        for ( int ctr = 0; ctr < 10; ctr++ )
+        for ( int ctr = 1; ctr < 11; ctr++ )
             {
-                System.out.println( ctr + "\t" + ctr*ctr + "\t" + ( int )( 5 * Math.random() ) );
+                System.out.println( ctr + "\t" + ctr*ctr + "\t" + ( int )( ctr + ( ctr * Math.random())  ) );
 
                 }
      
