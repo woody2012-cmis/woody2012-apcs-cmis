@@ -7,12 +7,12 @@ public class FundamentalsP7
        int positive = 0;
        int negative = 0;
             
-for(int index = 0;index<randomNumbers.length;index++)
-{
+       for(int index = 0;index<randomNumbers.length;index++)
+       {
     int i = 0;
             
     i = (int)(100*Math.random());
-    if (i % 2 == 0)
+    if (index % 2 == 0)
     {
      randomNumbers[index] = ((int)(100*(-1)*Math.random()));
      negative++;
@@ -23,13 +23,23 @@ for(int index = 0;index<randomNumbers.length;index++)
      positive++;
     }//end else
  
-}//end for
+   }//end for
 
-int index = 0;
+   int index = 0;
 while (index < randomNumbers.length)
 {
-    System.out.print("There are " + positive + " numbers" + "." + "There are " + negative + " numbers" + ".");
+    System.out.println(randomNumbers[index] + "\t" );
+    index++;
+}//end while
+   System.out.println("There are " + positive + " positive" + " numbers" + ".");
+for (int i = 0; i < randomNumbers.length; i++)
+{
+    if (randomNumbers [i] > 0)
+    {
+    System.out.println(randomNumbers[i]);
+    }
 }
-}
-}
+
+    }//end main
+}//end class
     
