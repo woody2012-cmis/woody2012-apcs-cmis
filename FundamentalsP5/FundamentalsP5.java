@@ -16,12 +16,8 @@ public class FundamentalsP5
         int index = 0;
         while(index<songs.length-1)
         {
-           
              System.out.print(songs[index]+ ", ");
              index++;
-             
-            
-        
         }
          System.out.print(songs[index=2]);
 }

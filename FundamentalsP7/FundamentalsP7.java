@@ -36,7 +36,7 @@ for (int i = 0; i < randomNumbers.length; i++)
 {
     if (randomNumbers [i] > 0)
     {
-    System.out.println(randomNumbers[i]);
+     System.out.println(randomNumbers[i]);
     }
 }
 

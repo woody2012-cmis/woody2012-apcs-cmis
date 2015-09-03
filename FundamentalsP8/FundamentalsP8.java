@@ -9,19 +9,26 @@ public class FundamentalsP8
             System.out.println(artists[index] );
         } 
         
+        artists[((int)(3*Math.random()))] = "Michael Jackson";
+        for(int index = 0;index<artists.length;index++)
+        {
+            System.out.println(artists[index]);
+        }
         
-        String [] songs = {"Party", "Verge" , "Into the New World"};
-        int index = 0;
-        while(index<songs.length-1)
+        for(int index = 0;index<artists.length;index++)
         {
            
-             System.out.print(songs[index]+ ", ");
-             index++;
-             
-            
+            if ( artists[index].equals("Michael Jackson"))
+                {
+                 System.out.println("We found Michael!");
+                }
+            else
+                {
+                System.out.println("No Michael in music" + "["+index+"]");
+                }
         
-        }
-         System.out.print(songs[index=2]);
+        }//end for
+       
         }//end main
 }//end class
     
