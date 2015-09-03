@@ -4,9 +4,9 @@ public class FundamentalsP4
      public static void main( String[] args )
         {
         
-        for ( int ctr = 1; ctr < 11; ctr++ )
+        for ( int num = 1; num < 11; num++ )
             {
-                System.out.println( ctr + "\t" + ctr*ctr + "\t" + ( int )( ctr + ( ctr * Math.random())  ) );
+                System.out.println(num + "\t" + num*num + "\t" + ( int )( num + ( num * Math.random())));
 
                 }
      

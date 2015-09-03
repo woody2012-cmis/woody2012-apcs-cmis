@@ -11,15 +11,15 @@ public class FundamentalsP7
        {
     int i = 0;
             
-    i = (int)(100*Math.random());
+    i = (int)(101*Math.random());
     if (index % 2 == 0)
     {
-     randomNumbers[index] = ((int)(100*(-1)*Math.random()));
+     randomNumbers[index] = ((int)(101*(-1)*Math.random()));
      negative++;
     }//end if
     else
     {
-     randomNumbers[index] = ((int)(100*Math.random()));
+     randomNumbers[index] = ((int)(101*Math.random()));
      positive++;
     }//end else
  

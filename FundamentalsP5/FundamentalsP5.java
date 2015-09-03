@@ -19,7 +19,7 @@ public class FundamentalsP5
              System.out.print(songs[index]+ ", ");
              index++;
         }
-         System.out.print(songs[index=2]);
+        System.out.print(songs[index=2]);
 }
 }
     

@@ -8,7 +8,7 @@ public class FundamentalsP6
             
        for(int index = 0;index<randomnumbers.length;index++)
         {
-            randomnumbers[index] =  (int) ( Math.random()*100);
+            randomnumbers[index] =  (int) ( Math.random()*101);
         } 
         
        for(int index = 0;index<randomnumbers.length;index++)
