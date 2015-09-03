@@ -12,7 +12,7 @@ public class FundamentalsP7
     int i = 0;
             
     i = (int)(101*Math.random());
-    if (index % 2 == 0)
+    if (i % 2 == 0)
     {
      randomNumbers[index] = ((int)(101*(-1)*Math.random()));
      negative++;
