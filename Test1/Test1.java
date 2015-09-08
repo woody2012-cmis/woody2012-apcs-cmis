@@ -5,50 +5,25 @@ public class Test1
      { 
            String input = JOptionPane.showInputDialog ( "Give me an integer." );
            int num = Integer.parseInt (input);
-
+           
            int r = num%2;
            
-           double [] randomNumbers = new double [num]; 
-           
-           for (int index = 0; index<5;index++) //for loop
-           if( r == 1 )// show odd
-                {
-                randomNumbers[index] = (double)(Math.random() * 51 );
-                } //end if
-           else //show even 
-                {
-                randomNumbers[index] = (double)(Math.random() * 51 );
-                } //end else
-           
-           
-           int index = 0;
-           while(index<num) // while loop
+           double [] myArray = new double [num]; 
+   
+           for(int index=0;index<num;index++) 
            {
-               System.out.println(index + (double) (Math.random()));//print E for even
-               index++;
+               myArray [index] = (Math.random()*51);
+               System.out.println(index + ": " + myArray[index]);
            } //end while
            
-           for (int index1 = 0; index1<5;index1--) //for loop
-           if( r == 1 )// show odd
-                {
-                randomNumbers[index1] = (double)(Math.random() * 51 );
-                } //end if
-           else //show even 
-                {
-                randomNumbers[index1] = (double)(Math.random() * 51 );
-                } //end else
-           
-           
-           int index1 = 0;
-           while(index<num) // while loop
+           int index1 = myArray.length-1;
+           while (index1>=0)
            {
-               System.out.println(index1 + (double) (Math.random()));//print E for even
-               index1--;
-           } //end while
+              System.out.println(index1 + ": " + myArray[index1]);
+              index1--;
+           }//end while
+           } //end method main
            
-   
-
-     } //end method main
-        } //end class
-   
+     } //class
+      
         
