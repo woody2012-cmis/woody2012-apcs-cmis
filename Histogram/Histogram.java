@@ -15,10 +15,10 @@ public class Histogram
         } //end while
 
         int [] counts = new int [100];
-        for (int index = 0; index <= 99; index++)
+        for (int index = 0; counts <= 99; index++)
         {
-            int counter = int randomNumbers[index];
-            count[counter]++;
+            int counter = (int) randomNumbers[index];
+            counts[counter]++;
 
         }
 
