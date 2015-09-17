@@ -4,23 +4,65 @@ public class Histogram
     public static void main( String[] args )
     { 
         String input = JOptionPane.showInputDialog ( "Give me an integer." );
-        int num = Integer.parseInt (input);
-
-        int [] randomNumbers = new int [num]; 
-
-        for(int index = 0; index < randomNumbers.length; index++) 
+        int num = Integer.parseInt (input); //number put in is integer. num is same as randomNumbers.length 
+        int [] randomNumbers = new int [num]; //randomNumbers is the length of the input (ex. 50)
+        int [] count = new int [100]; //count for each random numbers
+        int sum = 0;
+        int max = 0;
+        int min = 99;
+        int mode = 0;
+        int most = 0;
+        
+        for(int index = 0; index < randomNumbers.length; index++) //loop
         {
-            randomNumbers [index] = (int)(Math.random()*98+1);
-            System.out.println(index + ": " + randomNumbers[index]);
+            randomNumbers [index] = (int)(Math.random()*100); //possibility that an index can be from 0-99
         } //end while
-
-        int [] counts = new int [100];
-        for (int index = 0; counts <= 99; index++)
+ 
+        for (int index = 0; index < randomNumbers.length; index++)
         {
-            int counter = (int) randomNumbers[index];
-            counts[counter]++;
-
+            int counter = randomNumbers[index];
+            count[counter]++; //count how many times a random number occur
         }
-
+        
+        for (int index = 0; index <= 99; index++) 
+        {
+            System.out.print(index + ":"); //print 0-99 
+            for (int index1 = 0; index1 < count[index]; index1++)
+            {
+                System.out.print("#"); //print hashtags DON'T UNDERSTAND THIS
+            }
+            System.out.println(""); //print vertically
+        }
+        //end histogram generation
+        for (int i : randomNumbers)
+        {
+            sum += i;
+        }
+        
+        for ( int index = 0; index < randomNumbers.length; index++)
+        {
+            if (randomNumbers [index] >= max)
+            {
+                max = randomNumbers [index]; //the random numbers (0-99) in the index (ex. index 1 might be 52)           
+            }
+            if (randomNumbers [index] <= min)
+            {
+                min = randomNumbers [index]; //the random numbers (0-99) in the index (ex. index 1 might be 52)
+            }
+        }
+        
+        for (int index = 0; index < count.length; index++)
+        {
+            if (count [index] >= most) //greatest count = most
+            {
+                most = count [index]; //the amount of count in that index
+                mode = index; //print that index out
+            }
+        }
+        System.out.println("MIN:" + min);
+        System.out.println("MAX:" + max);
+        System.out.println("SUM:" + sum);
+        System.out.println("AVG:" + (double) sum/num);
+        System.out.println("MST:" + mode);
     } //end method main 
 }//end class
