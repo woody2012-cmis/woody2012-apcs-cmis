@@ -1,77 +1,88 @@
 import javax.swing.JOptionPane;
 public class WeatherChaos
 {
-    public static void main( String[] args )
-    { 
-        String input = JOptionPane.showInputDialog ( "Give me an integer." );
-        int num = Integer.parseInt (input); //number put in is integer. num is same as randomNumbers.length 
-        int [] randomNumbers = new int [num]; //randomNumbers is the length of the input (ex. 50)
-        int [] count = new int [10]; //count for each random numbers
-        int sum = 0;
-        int max = 0;
-        int min = 99;
-        int mode = 0;
-        int most = 0;
+     public static void main( String[] args )
+     { 
+    String input = JOptionPane.showInputDialog ( "Give me an integer." );
+    int num = Integer.parseInt (input); //number put in is integer. num is same as temp.length 
+    int [] temp = new int [num]; //temp is the length of the input (ex. 10)
+    int [] count = new int [num]; //count for each random numbers
+    int sum = 1;
+    int max = 1;
+    int min = 99;
+    //index = day
+    //randomNumbers = temp
         
-        if(num = 0;num > 32)
-                {
-                System.out.println( "Log in successful" );
-                }//end if
-         else
-                {
-                System.out.println( "Login unsuccessful... please try again" );
-                }//end if
-        
-        for(int index = 0; index < randomNumbers.length; index++) //loop
+     if( num < 1  && num > 31 )
         {
-            randomNumbers [index] = (int)(Math.random()*100); //possibility that an index can be from 0-99
+          System.out.println( "That's not a valid number of days" );
+        }//end if
+        else
+        {
+                
+        for(int day = 1; day < temp.length; day++) //loop
+        {
+            temp [day] = (int) (Math.random() * 200) - 100; //possibility that an index can be from -100 to 99
         } //end while
- 
-        for (int index = 0; index < randomNumbers.length; index++)
-        {
-            int counter = randomNumbers[index];
-            count[counter]++; //count how many times a random number occur
-        }
         
-        for (int index = 0; index <= 99; index++) 
+        for (int day = 0; day < temp.length; day++)
+          {
+            int counter = temp[day];
+            count[counter]++; //count how many times a random number occur
+          }
+        
+        if(temp [num] < (int) 0 )
+                {
+                System.out.println( "freezing" );
+                }//end if
+        if(temp [num] > (int) 0 && temp [num] < (int) 15)
+                {
+                System.out.println( "chilly" );
+                }//end if
+        if(temp [num] > (int) 15 && temp [num] < (int) 30)
+                {
+                System.out.println( "comfortable" );
+                }//end if
+        if(temp [num] > (int) 31 && temp [num] < (int) 40)
+                {
+                System.out.println( "hot" );
+                }//end if
+        if(temp [num] > (int) 40)
+                {
+                System.out.println( "AAAAAAUUUUGGGHHH!" );
+                }//end if
+                
+        for (int day = 1; day <= 99; day++) 
         {
-            System.out.print(index + ":"); //print 0-99 
-            for (int index1 = 0; index1 < count[index]; index1++)
+            System.out.print(day + ":"); //print -100 to 99 
+            for (int day1 = 0; day1 < count[day]; day1++)
             {
-                System.out.print("#"); //print hashtags DON'T UNDERSTAND THIS
+                System.out.print(temp); //print temp 
             }
             System.out.println(""); //print vertically
         }
         //end histogram generation
-        for (int i : randomNumbers)
+        for (int i : temp)
         {
             sum += i;
         }
         
-        for ( int index = 0; index < randomNumbers.length; index++)
+        for ( int day = 1; day < temp.length; day++)
         {
-            if (randomNumbers [index] >= max)
+            if (temp [day] >= max)
             {
-                max = randomNumbers [index]; //the random numbers (0-99) in the index (ex. index 1 might be 52)           
+                max = temp [day]; //the random numbers (-100 to 99) in the index (ex. index 1 might be 52)           
             }
-            if (randomNumbers [index] <= min)
+            if (temp [day] <= min)
             {
-                min = randomNumbers [index]; //the random numbers (0-99) in the index (ex. index 1 might be 52)
+                min = temp [day]; //the random numbers (-100 to 99) in the index (ex. index 1 might be 52)
             }
         }
         
-        for (int index = 0; index < count.length; index++)
-        {
-            if (count [index] >= most) //greatest count = most
-            {
-                most = count [index]; //the amount of count in that index
-                mode = index; //print that index out
-            }
-        }
-        System.out.println("MIN:" + min);
-        System.out.println("MAX:" + max);
-        System.out.println("SUM:" + sum);
-        System.out.println("AVG:" + (double) sum/num);
-        System.out.println("MST:" + mode);
-    } //end method main 
-}//end class
+        System.out.println("The minimum temperature was: " + min + " on day " + num + ".");
+        System.out.println("The maximum temperature was: " + max + " on day " + num + ".");
+        System.out.println("The average temperature was: " + sum/num + " on day " + num + ".");
+        System.out.println("The biggest temperature swing was" + temp + " on day " + num + ".");
+     } //end else
+  } //end method main
+} //end class
