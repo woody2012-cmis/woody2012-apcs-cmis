@@ -15,7 +15,7 @@ public class WeatherChaos
     //index = day
     //randomNumbers = temp
        
-     if( 1 < in |  in < 31 )
+     if( 1 < in || in < 31 )
         {
           System.out.println( "That's not a valid number of days" );
         }//end if
@@ -57,7 +57,7 @@ public class WeatherChaos
 
         for (int day = in + 1; day <= 99; day++)  
         {
-         if(temp [num] >= (int) 1 )
+         if(temp [num] > (int) 1 )
                 {
                 System.out.println( "freezing" );
                 }//end if
