@@ -14,11 +14,11 @@ public class Student
         gender = "Male";
     }//end contructor ClassDesignP1
 
-    public Student(String first, String last)
+    public Student(String name, int age, String gender)
     {
-        this.name = "Emi Hayakawa";
-        this.age = 16;
-        this.gender = "Female";
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }//end contructor ClassDesignP1
 
     public String toString()

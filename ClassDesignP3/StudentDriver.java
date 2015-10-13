@@ -4,7 +4,7 @@ public class StudentDriver
     public static void main (String[] args)
     {
         Student Senior001 = new Student();
-        Student Junior001= new Student("Emi", "Hayakawa"); 
+        Student Junior001= new Student("Emi Hayakawa", 16, "Female"); 
         
         JOptionPane.showMessageDialog(null,Senior001, "Senior", JOptionPane.PLAIN_MESSAGE);
         System.out.println(Junior001);
