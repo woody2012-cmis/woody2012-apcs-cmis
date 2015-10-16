@@ -15,18 +15,18 @@ public class CubiverseAppDriver
             zero[i] = new Cubiverse();
 
             // 2    
-            //w = (int)(Math.random() * i * 10) + 1;
-            //h = (int)(Math.random() * i * 10) + 1;
-            //d = (int)(Math.random() * i * 10) + 1;
-            //name = "CubiVerse-"+i * Math.random();
-            //threeA[i] = new Cubiverse( w, h, d, name);
+            w = (int)(Math.random() * i * 10) + 1;
+            h = (int)(Math.random() * i * 10) + 1;
+            d = (int)(Math.random() * i * 10) + 1;
+            name = "CubiVerse-"+i * Math.random();
+            threeA[i] = new Cubiverse( w, h, d, name);
 
             //3
-            //x = Math.random();
-            //y = Math.random();
-            //z = Math.random();
-            //name = "CubiVerse-"+i * Math.random();
-            //threeB[i] = new Cubiverse(x, y, z, name);
+            x = Math.random();
+            y = Math.random();
+            z = Math.random();
+            name = "CubiVerse-"+i * Math.random();
+            threeB[i] = new Cubiverse(x, y, z, name);
         }
 
         System.out.println("Zero Arguments\n==============");
@@ -37,12 +37,12 @@ public class CubiverseAppDriver
         System.out.println("Three A Arguments\n=================");
         for ( int i = 0; i < numCubiverses; i++ )
         {
-            //System.out.println(threeA[i]);
+            System.out.println(threeA[i]);
         }
         System.out.println("Three B Arguments\n=================");
         for ( int i = 0; i < numCubiverses; i++ )
         {
-            //System.out.println(threeB[i]);
+            System.out.println(threeB[i]);
         }     
     }
 }
