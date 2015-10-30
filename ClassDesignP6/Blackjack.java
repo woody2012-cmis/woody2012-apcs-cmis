@@ -1,16 +1,16 @@
-public class Card
+public class Blackjack
 {
     private int totalCards;
     private int givenCards;
     private String myHand;
     
-    public Card()
+    public Blackjack()
     {
         totalCards = 52;
         givenCards = 3;
     }//end constructor 
 
-    public Card(int totalCards, int givenCards)
+    public Blackjack(int totalCards, int givenCards)
     {
         this.myHand = myHand;
     }//end construtor 2
