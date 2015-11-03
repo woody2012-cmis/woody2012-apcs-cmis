@@ -1,24 +1,24 @@
 public class Blackjack
 {
-    private int totalCards;
-    private int givenCards;
-    private String myHand;
-    
+    private String ranks;
+    private String suits;
+
     public Blackjack()
     {
-        totalCards = 52;
-        givenCards = 3;
+        ranks = "2";
+        suits = "♥";
     }//end constructor 
 
-    public Blackjack(int totalCards, int givenCards)
+    public Blackjack(String ranks, String suits)
     {
-        this.myHand = myHand;
+        this.ranks = ranks;
+        this.suits = suits;
     }//end construtor 2
-    
+
     public String toString()
     {
         String output = new String();
-        output = myHand;
+        output = ranks + suits;
         return output;
     }
 }

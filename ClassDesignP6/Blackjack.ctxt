@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Blackjack()
-comment1.params=totalCards\ givenCards
-comment1.target=Blackjack(int,\ int)
+comment1.params=ranks\ suits
+comment1.target=Blackjack(java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ toString()
 numComments=3
