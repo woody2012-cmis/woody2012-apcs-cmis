@@ -8,12 +8,12 @@ public class BlackjackDriver
         int[] a = new int[2];
         int[] b = new int[2];
 
-        String[] dealer = new String[2];
-        String[] player1 = new String[2];
-        String[] player2 = new String[2];
-        String[] player3 = new String[2];
-        String[] player4 = new String[2];
-        String[] player5 = new String[2];
+        Blackjack[] dealer = new Blackjack[2];
+        Blackjack[] player1 = new Blackjack[2];
+        Blackjack[] player2 = new Blackjack[2];
+        Blackjack[] player3 = new Blackjack[2];
+        Blackjack[] player4 = new Blackjack[2];
+        Blackjack[] player5 = new Blackjack[2];
 
         String[] ranks = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
         String[] suits = {"♥","♦","♣","♠"};
@@ -22,401 +22,431 @@ public class BlackjackDriver
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            dealer[i] = "Card of Dealer: " + ranks[a[i]] + suits[b[i]];
+            Blackjack dealerhand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            dealer[i] = dealerhand;
             System.out.println(dealer[i]);
         }
 
         for(int i = 0; i < dealer.length; i++)
         {
-            if (dealer[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            else if (dealer[i]==("Q"))
+            else if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            else if (dealer[i]==("K"))
+            else if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            else if (dealer[i]==("A"))
+            else if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            else if (dealer[i]==("2"))
+            else if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            else if (dealer[i]==("3"))
+            else if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            else if (dealer[i]==("4"))
+            else if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            else if (dealer[i]==("5"))
+            else if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            else if (dealer[i]==("6"))
+            else if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            else if (dealer[i]==("7"))
+            else if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            else if (dealer[i]==("8"))
+            else if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            else if (dealer[i]==("9"))
+            else if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            else if (dealer[i]==("10"))
+            else if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
             totaldealervalue += value;
             System.out.println("Dealer Value: " + value);
         }
-        
-        System.out.print("Total sum of dealer: " + totaldealervalue + "\n");
+
+        System.out.print("Total Sum of Dealer: " + totaldealervalue + "\n");
 
         System.out.println("\n");
+
         for(int i = 0; i < player1.length; i++)
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            player1[i] = "Card of Player 1: " + ranks[a[i]] + suits[b[i]];
+            Blackjack Player1hand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            player1[i] = Player1hand;
             System.out.println(player1[i]);
         }
 
         for(int i = 0; i < player1.length; i++)
         {
-            if (player1[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            if (player1[i]==("Q"))
+            if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            if (player1[i]==("K"))
+            if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            if (player1[i]==("A"))
+            if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            if (player1[i]==("2"))
+            if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            if (player1[i]==("3"))
+            if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            if (player1[i]==("4"))
+            if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            if (player1[i]==("5"))
+            if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            if (player1[i]==("6"))
+            if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            if (player1[i]==("7"))
+            if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            if (player1[i]==("8"))
+            if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            if (player1[i]==("9"))
+            if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            if (player1[i]==("10"))
+            if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
-            System.out.println(value);
+            totalplayervalue += value;
+            System.out.println("Player 1 Value: " + value);
         }
+
+        System.out.print("Total Sum of Player 1: " + totalplayervalue + "\n");
+
         System.out.println("\n");
 
         for(int i = 0; i < player2.length; i++)
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            player2[i] = "Card of Player 2: " + ranks[a[i]] + suits[b[i]];
+            Blackjack Player2hand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            player2[i] = Player2hand;
             System.out.println(player2[i]);
         }
 
-        for(int i = 0; i < player1.length; i++)
+        for(int i = 0; i < player2.length; i++)
         {
-            if (player2[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            if (player2[i]==("Q"))
+            if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            if (player2[i]==("K"))
+            if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            if (player2[i]==("A"))
+            if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            if (player2[i]==("2"))
+            if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            if (player2[i]==("3"))
+            if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            if (player2[i]==("4"))
+            if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            if (player2[i]==("5"))
+            if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            if (player2[i]==("6"))
+            if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            if (player2[i]==("7"))
+            if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            if (player2[i]==("8"))
+            if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            if (player2[i]==("9"))
+            if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            if (player2[i]==("10"))
+            if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
-            System.out.println(value);
+            totalplayervalue += value;
+            System.out.println("Player 2 Value: " + value);
         }
 
+        System.out.print("Total Sum of Player 2: " + totalplayervalue + "\n");
+
         System.out.println("\n");
+
+        totalplayervalue = 0;
 
         for(int i = 0; i < player3.length; i++)
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            player3[i] = "Card of Player 3: " + ranks[a[i]] + suits[b[i]];
+            Blackjack Player3hand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            player3[i] = Player3hand;
             System.out.println(player3[i]);
         }
 
-        for(int i = 0; i < player1.length; i++)
+        for(int i = 0; i < player3.length; i++)
         {
-            if (player3[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            if (player3[i]==("Q"))
+            if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            if (player3[i]==("K"))
+            if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            if (player3[i]==("A"))
+            if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            if (player3[i]==("2"))
+            if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            if (player3[i]==("3"))
+            if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            if (player3[i]==("4"))
+            if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            if (player3[i]==("5"))
+            if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            if (player3[i]==("6"))
+            if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            if (player3[i]==("7"))
+            if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            if (player3[i]==("8"))
+            if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            if (player3[i]==("9"))
+            if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            if (player3[i]==("10"))
+            if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
-            System.out.println(value);
+            totalplayervalue += value;
+            System.out.println("Player 3 Value: " + value);
         }
 
+        System.out.print("Total Sum of Player 3: " + totalplayervalue + "\n");
+
         System.out.println("\n");
+
+        totalplayervalue = 0;
 
         for(int i = 0; i < player4.length; i++)
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            player4[i] = "Card of Player 4: " + ranks[a[i]] + suits[b[i]];
+            Blackjack Player4hand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            player4[i] = Player4hand;
             System.out.println(player4[i]);
         }
 
-        for(int i = 0; i < player1.length; i++)
+        for(int i = 0; i < player4.length; i++)
         {
-            if (player4[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            if (player4[i]==("Q"))
+            if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            if (player4[i]==("K"))
+            if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            if (player4[i]==("A"))
+            if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            if (player4[i]==("2"))
+            if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            if (player4[i]==("3"))
+            if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            if (player4[i]==("4"))
+            if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            if (player4[i]==("5"))
+            if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            if (player4[i]==("6"))
+            if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            if (player4[i]==("7"))
+            if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            if (player4[i]==("8"))
+            if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            if (player4[i]==("9"))
+            if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            if (player4[i]==("10"))
+            if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
-            System.out.println(value);
+            totalplayervalue += value;
+            System.out.println("Player 4 Value: " + value);
         }
 
+        System.out.print("Total Sum of Player 4: " + totalplayervalue + "\n");
+
         System.out.println("\n");
+
+        totalplayervalue = 0;
 
         for(int i = 0; i < player5.length; i++)
         {
             a[i] = ((int) (Math.random()*13));
             b[i] = ((int) (Math.random()*4));
-            player5[i] = "Card of Player 5: " + ranks[a[i]] + suits[b[i]];
+            Blackjack Player5hand = new Blackjack(ranks[a[i]], suits[b[i]]);
+            player5[i] = Player5hand;
             System.out.println(player5[i]);
         }
 
-        for(int i = 0; i < player1.length; i++)
+        for(int i = 0; i < player5.length; i++)
         {
-            if (player5[i]==("J"))
+            if (ranks[a[i]]==("J"))
             {
                 value = 10;
             }
-            if (player5[i]==("Q"))
+            if (ranks[a[i]]==("Q"))
             {
                 value = 10;
             }
-            if (player5[i]==("K"))
+            if (ranks[a[i]]==("K"))
             {
                 value = 10;
             }
-            if (player5[i]==("A"))
+            if (ranks[a[i]]==("A"))
             {
                 value = 11;
             }
-            if (player5[i]==("2"))
+            if (ranks[a[i]]==("2"))
             {
                 value = 2;
             }
-            if (player5[i]==("3"))
+            if (ranks[a[i]]==("3"))
             {
                 value = 3;
             }
-            if (player5[i]==("4"))
+            if (ranks[a[i]]==("4"))
             {
                 value = 4;
             }
-            if (player5[i]==("5"))
+            if (ranks[a[i]]==("5"))
             {
                 value = 5;
             }
-            if (player5[i]==("6"))
+            if (ranks[a[i]]==("6"))
             {
                 value = 6;
             }
-            if (player5[i]==("7"))
+            if (ranks[a[i]]==("7"))
             {
                 value = 7;
             }
-            if (player5[i]==("8"))
+            if (ranks[a[i]]==("8"))
             {
                 value = 8;
             }
-            if (player5[i]==("9"))
+            if (ranks[a[i]]==("9"))
             {
                 value = 9;
             }
-            if (player5[i]==("10"))
+            if (ranks[a[i]]==("10"))
             {
                 value = 10;
             }
-            System.out.println(value);
+            totalplayervalue += value;
+            System.out.println("Player Value: " + value);
         }
+
+        System.out.print("Total Sum of Player 5: " + totalplayervalue + "\n");
+
     }//end method main
 }//end CardDriver

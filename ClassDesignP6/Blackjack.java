@@ -1,7 +1,7 @@
 public class Blackjack
 {
-    private String ranks;
-    private String suits;
+    public String ranks;
+    public String suits;
 
     public Blackjack()
     {
@@ -17,8 +17,8 @@ public class Blackjack
 
     public String toString()
     {
-        String output = new String();
-        output = ranks + suits;
-        return output;
+        String result = String.format(
+        "%s %s", ranks, suits);
+        return result;
     }
 }
