@@ -25,6 +25,11 @@ public class MySong
     {
         this.yearReleased = year;
     }//end method setyearReleased
+    
+    public void setsongLength(double songLength)
+    {
+        this.yearReleased = year;
+    }//end method setyearReleased
 
     public MySong(String songName, String songGenre, double songLength)
     {
