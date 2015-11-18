@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 public class MySong
 {
     //1. Create instance variables
@@ -5,7 +6,9 @@ public class MySong
     private String songGenre;
     private double songLength;
     private int yearReleased;
-    
+    String mins = "";
+    String user = JOptionPane.showInputDialog( "Usernam");
+    int pass = Integer.parseInt(JOptionPane.showInputDialog( "Password"));
     
     //2. Write constructor to initialize instance variables
     public MySong()
@@ -16,6 +19,13 @@ public class MySong
         yearReleased = 2014;
     }//end contructor 
     
+     public MySong(String songName, String songGenre, double songLength)
+    {
+        this.songName = songName;
+        this.songGenre = songGenre;
+        this.songLength = songLength;
+    }
+    
     public int getyearReleased()
     {
         return yearReleased;
@@ -23,20 +33,17 @@ public class MySong
 
     public void setyearReleased(int year)
     {
-        this.yearReleased = year;
+        if (user.equals("Woody") && pass == (123))
+        {
+            this.yearReleased=year;
+        }
     }//end method setyearReleased
     
-    public void setsongLength(double songLength)
+     public String convertToSecond()
     {
-        this.yearReleased = year;
-    }//end method setyearReleased
-
-    public MySong(String songName, String songGenre, double songLength)
-    {
-        this.songName = songName;
-        this.songGenre = songGenre;
-        this.songLength = songLength;
-    }//end constructor
+        mins = (int)(songLength/60) + "." + (int)(songLength%60);
+        return mins;
+    }
 
     public String toString()
     {
@@ -47,3 +54,5 @@ public class MySong
         return output;
     }//end method toString()
 }
+
+   
