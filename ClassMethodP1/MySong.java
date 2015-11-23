@@ -7,10 +7,10 @@ public class MySong
     private double songLength;
     private int yearReleased;
     String mins = "";
-    String user = JOptionPane.showInputDialog( "Usernam");
-    int pass = Integer.parseInt(JOptionPane.showInputDialog( "Password"));
-    
+    String password = JOptionPane.showInputDialog ("Password"); 
+
     //2. Write constructor to initialize instance variables
+
     public MySong()
     {
         songName = new String ("Catch Me If You Can.");
@@ -18,31 +18,32 @@ public class MySong
         songLength = 3.45;
         yearReleased = 2014;
     }//end contructor 
-    
-     public MySong(String songName, String songGenre, double songLength)
+
+    public MySong(String songName, String songGenre, double songLength)
     {
         this.songName = songName;
         this.songGenre = songGenre;
         this.songLength = songLength;
     }
-    
+
     public int getyearReleased()
     {
         return yearReleased;
     }//end method getyearReleased
 
-    public void setyearReleased(int year)
-    {
-        if (user.equals("Woody") && pass == (123))
-        {
-            this.yearReleased=year;
-        }
-    }//end method setyearReleased
-    
-     public String convertToSecond()
+    public String convertToSecond()
     {
         mins = (int)(songLength/60) + "." + (int)(songLength%60);
         return mins;
+    }
+
+    public void setYearReleased(int yearreleased)
+    {
+        if (password.equals("123"))
+        {
+            this.yearReleased=yearreleased;
+        }
+
     }
 
     public String toString()
@@ -55,4 +56,4 @@ public class MySong
     }//end method toString()
 }
 
-   
+  
