@@ -7,12 +7,6 @@ public class Student
     private String gender;
     private double[] stdGrades= new double[5];
 
-    private double Aplus = 4.0;
-    private double Aminus = 3.7;
-    private double Bplus = 3.3;
-    private double B = 3.0;
-    private double Bminus = 2.7;
-
     private double English = 0;
     private double Math = 0;
     private double Science = 0;
