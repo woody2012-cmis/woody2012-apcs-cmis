@@ -7,6 +7,7 @@ public class MySong
     private double songLength;
     private int yearReleased;
     String mins = "";
+    String username = JOptionPane.showInputDialog ("Username");
     String password = JOptionPane.showInputDialog ("Password"); 
 
     //2. Write constructor to initialize instance variables
@@ -39,7 +40,7 @@ public class MySong
 
     public void setYearReleased(int yearreleased)
     {
-        if (password.equals("123"))
+        if (username.equals("Woody")&&password.equals("123"))
         {
             this.yearReleased=yearreleased;
         }
