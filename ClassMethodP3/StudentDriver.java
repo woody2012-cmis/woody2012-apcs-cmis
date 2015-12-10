@@ -1,12 +1,16 @@
 import javax.swing.JOptionPane;
-public class StudentDriver
+public class MyStudentDriver
 {
-    public static void main (String[] args)
+    public static void main(String[] args)
     {
-        Student Senior001 = new Student();
-        Student Junior001= new Student("Emi Hayakawa", 16, "Female"); 
         
-        JOptionPane.showMessageDialog(null,Senior001, "Senior", JOptionPane.PLAIN_MESSAGE);
-        System.out.println(Junior001);
-    }
-}
+        MyStudent student = new MyStudent("Joe","Senior",4.0,4.0,3.5,4.0,4.0);
+        student.CalcGPA();
+        System.out.println(student);
+        
+       
+        student.setGPA(4.0,4.0,4.0,4.0,4.0);
+        student.CalcGPA();
+        System.out.println(student);
+    }//end method main
+}//end class MyStudentDriver
