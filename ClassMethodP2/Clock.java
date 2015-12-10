@@ -1,41 +1,54 @@
-import javax.swing.JOptionPane;
 public class Clock
 {
-    private int hour ;
-    private int minutes ;
-    private int seconds ;
+    private int hours;
+    private int mins;
+    private int secs;
     private int totalsecs;
-    
-     
-    public Clock(int hour, int minutes, int seconds)
+    private int addhour;
+   
+    public Clock()
     {
-        this.hour = Integer.parseInt(JOptionPane.showInputDialog("Hour"));
-        this.minutes = Integer.parseInt(JOptionPane.showInputDialog("Minutes"));
-    }//end constructor
-    
-    
-    public void setTime(int hour, int minutes, int seconds)
-    {
-        this.hour = hour;
-        this.minutes = minutes;
-        this.seconds = seconds;
+        hours = 18;
+        mins = 23;
+        secs = 42;
     }
     
-    public int calcsecs()
+    public Clock(int hours,int mins, int secs)
     {
-        totalsecs= (hour*3600) + (minutes*60) + seconds;
+        this.hours=hours;
+        this.mins=mins;
+        this.secs=mins;
+    }
+    
+    
+    public void setTime(int hours,int min, int secs)
+    {
+        this.hours=hours;
+        this.mins=mins;
+        this.secs=mins;
+    }
+    
+    //convert time to secs
+    public int totalsecs()
+    {
+        totalsecs = (hours*3600) + (mins*60) + secs;
         return totalsecs;
     }
-   
-    public void convertDaylightSaving(int savingsHour)
+    
+    //daylightsaving +1 hour
+    public int convertDaylightSaving(int addhour)
     {
-        this.hour += savingsHour;
+        this.hours = this.hours+addhour;
+        return hours;
     }
     
     public String toString()
+    
     {
-        String output = "Time = " + hour + ":" + minutes + ":" + seconds + "\n"
-                  + "Total of " + calcsecs() + " seconds" + "\n";
-        return output;
+         String result = String.format(
+        "Time: %02d : %02d : %02d \n"+
+        "Total seconds: %d\n", hours, mins, secs, totalsecs);
+        return result;
     }
-}//end class MySong
+    
+}
