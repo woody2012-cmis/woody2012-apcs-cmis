@@ -1,9 +1,9 @@
-public class MyStudent 
+public class Student 
 {
     //instances 
     private String first;
     private String last;
-    private double[] ClassGrades;
+    private double[] stdGrades;
     private double English;
     private double Math;
     private double Science;
@@ -11,24 +11,24 @@ public class MyStudent
     private double SocialScience;
     
     //zero argument
-    public MyStudent()
+    public Student()
     {
         first = new String("Woody");
         last = new String("Omaree");
-        ClassGrades = new double[5];
+        stdGrades = new double[5];
     }
     
     //multi arguments
-    public MyStudent(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience)
+    public Student(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience)
     {
         this.first=new String(first);
         this.last=new String(last);
-        this.ClassGrades = new double[5]; 
-        this.ClassGrades[0] = English;
-        this.ClassGrades[1] = Math;
-        this.ClassGrades[2] = Science;
-        this.ClassGrades[3] = FineArts;
-        this.ClassGrades[4] = SocialScience;
+        this.stdGrades = new double[5]; 
+        this.stdGrades[0] = English;
+        this.stdGrades[1] = Math;
+        this.stdGrades[2] = Science;
+        this.stdGrades[3] = FineArts;
+        this.stdGrades[4] = SocialScience;
         
     }
     
@@ -36,12 +36,12 @@ public class MyStudent
     {
         double total = 0.0;
         
-        for(int index=0; index<ClassGrades.length;index++)
+        for(int index=0; index<stdGrades.length;index++)
         {
             
-            total += ClassGrades[index];//short form
+            total += stdGrades[index];//short form
         }
-        total/= ClassGrades.length;
+        total/= stdGrades.length;
         
         return total; 
         
@@ -50,11 +50,11 @@ public class MyStudent
     //set the GPA
     public void setGPA(double English, double Math, double Science, double FineArts, double SocialScience)
     {
-        this.ClassGrades[0]=English;
-        this.ClassGrades[1]=Math;
-        this.ClassGrades[2]=Science;
-        this.ClassGrades[3]=FineArts;
-        this.ClassGrades[4]=SocialScience;
+        this.stdGrades[0]=English;
+        this.stdGrades[1]=Math;
+        this.stdGrades[2]=Science;
+        this.stdGrades[3]=FineArts;
+        this.stdGrades[4]=SocialScience;
     }
     
     public String toString()
