@@ -1,76 +1,67 @@
-import javax.swing.JOptionPane;
-public class Student
+public class MyStudent 
 {
-    //1. Create instance variables
-    private String name;
-    private int age;
-    private String gender;
-    private double[] stdGrades= new double[5];
-
-    private double English = 0;
-    private double Math = 0;
-    private double Science = 0;
-    private double FineArts = 0;
-    private double Social = 0;
-
-    private double GPA;
-    private double avgGPA;
-
-    //2. Write constructor to initialize instance variables
-    public Student(double English, double Math, double Science, double FineArts, double Social)
+    //instances 
+    private String first;
+    private String last;
+    private double[] ClassGrades;
+    private double English;
+    private double Math;
+    private double Science;
+    private double FineArts;
+    private double SocialScience;
+    
+    //zero argument
+    public MyStudent()
     {
-        this.English = English;
-        this.Math = Math;
-        this.Science = Science;
-        this.FineArts = FineArts;
-        this.Social = Social;
+        first = new String("Woody");
+        last = new String("Omaree");
+        ClassGrades = new double[5];
     }
-
-    public Student()
+    
+    //multi arguments
+    public MyStudent(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience)
     {
-        name = "Woody Omaree";
-        age = 17;
-        gender = "Male";
-        for (int i=0; i<stdGrades.length; i++)
+        this.first=new String(first);
+        this.last=new String(last);
+        this.ClassGrades = new double[5]; 
+        this.ClassGrades[0] = English;
+        this.ClassGrades[1] = Math;
+        this.ClassGrades[2] = Science;
+        this.ClassGrades[3] = FineArts;
+        this.ClassGrades[4] = SocialScience;
+        
+    }
+    
+    public double CalcGPA()
+    {
+        double total = 0.0;
+        
+        for(int index=0; index<ClassGrades.length;index++)
         {
-            stdGrades[i]=(int)(Math.random()*4);
+            
+            total += ClassGrades[index];//short form
         }
-    }//end contructor
-
-    public Student(String name, int age, String gender, double English, double Math, double Science, double FineArts, double Social)
+        total/= ClassGrades.length;
+        
+        return total; 
+        
+    }//end method CalcGPA
+    
+    //set the GPA
+    public void setGPA(double English, double Math, double Science, double FineArts, double SocialScience)
     {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        stdGrades[0] = English;
-        stdGrades[1] = Math;
-        stdGrades[2] = Science;
-        stdGrades[3] = FineArts;
-        stdGrades[4] = Social;
+        this.ClassGrades[0]=English;
+        this.ClassGrades[1]=Math;
+        this.ClassGrades[2]=Science;
+        this.ClassGrades[3]=FineArts;
+        this.ClassGrades[4]=SocialScience;
     }
-
-    public double avgGPA()
-    {
-        double totalGPA=0;
-        for (int i=0 ; i<stdGrades.length; i++)
-        {
-            totalGPA += stdGrades [i];
-        }
-        avgGPA = totalGPA / 5;
-        return avgGPA;
-    }
-
+    
     public String toString()
     {
-        String output = String.format(
-                "Name:" %s + "\n" +
-                 "Gender:" %s + "\n" +
-                 "Age:" %d + "\n" +
-                 "Average GPA: %.2f \n",     name, gender, age, avgGPA());
+        String output = new String();
+        output = "First name: " + first+"\n"+"Last name: "+last+"\n"+"Student's average GPA "+ CalcGPA();
         return output;
     }
-}//end class MySOng
-
-
-
     
+}
