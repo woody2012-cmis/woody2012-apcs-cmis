@@ -1,26 +1,33 @@
 public class ClockStore
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class s
-     */
-    public s()
+    private Clock[] clockInStock;
+    private int bigClock;
+    public ClockStore()
     {
-        // initialise instance variables
-        x = 0;
+        clockInStock = new Clock[3];
+        clockInStock[0] = new Clock( 12, 30, 45 );
+        clockInStock[1] = new Clock( 16, 54, 23 );
+        clockInStock[2] = new Clock( 21, 05, 38 );
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public int mostSeconds()
     {
-        // put your code here
-        return x + y;
+        
+        for (int i = 0; i < clockInStock.length; i++)
+        {
+            if (clockInStock[i].totalsecs() > bigClock)
+            {
+                bigClock = i;
+            }
+        }
+        return bigClock;
+    }
+    
+    public String toString()
+    {
+        String result = String.format(
+                "Time: %02d : %02d : %02d \n"+
+                "Total seconds: %d\n", hour, min, sec, totalsecs);
+        return result;
     }
 }

@@ -1,18 +1,15 @@
-import javax.swing.JOptionPane;
 public class Clock
 {
     private int hours;
     private int mins;
     private int secs;
     private int totalsecs;
-    private int addhour;
-
+    
     public Clock(int hours, int mins, int secs)
     {
         this.hours= hours;
         this.mins= mins;
         this.secs= secs;
-
     }//end constructor
 
 
@@ -30,19 +27,12 @@ public class Clock
         return totalsecs;
     }
 
-    //daylightsaving +1 hour
-    public int convertDaylightSaving(int addhour)
-    {
-        this.hours = this.hours+addhour;
-        return hours;
-    }
-
     public String toString()
+
     {
         String result = String.format(
                 "Time: %02d : %02d : %02d \n"+
                 "Total seconds: %d\n", hours, mins, secs, totalsecs);
         return result;
     }
-
 }
