@@ -4,14 +4,13 @@ public class Clock
     private int mins;
     private int secs;
     private int totalsecs;
-    
+
     public Clock(int hours, int mins, int secs)
     {
         this.hours= hours;
         this.mins= mins;
         this.secs= secs;
     }//end constructor
-
 
     public void setTime(int hours,int min, int secs)
     {
@@ -27,12 +26,11 @@ public class Clock
         return totalsecs;
     }
 
-    public String toString()
-
+    public String toString( )
     {
-        String result = String.format(
-                "Time: %02d : %02d : %02d \n"+
-                "Total seconds: %d\n", hours, mins, secs, totalsecs);
-        return result;
+        String output = String.format(
+                "%02d:%02d:%02d \n" + "Total seconds: %d\n", hours, mins, secs, totalsecs());
+        //output =  "The time is " + hour + ":" +  minute + ":" + second + "\nTotal seconds is " +  totalSeconds() ;
+        return output;
     }
 }
