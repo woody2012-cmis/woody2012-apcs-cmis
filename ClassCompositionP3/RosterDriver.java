@@ -1,9 +1,8 @@
-public class RosterDriver
-{
-    public static void main ( String args[] )
-    {
-        Roster Class = new Roster();
-        System.out.print(Class);
-    }
-    
+
+public class RosterDriver     {
+   public static void main (String argvs [] )
+   {
+       Roster asdf = new Roster();
+       System.out.println ( asdf );        
+   }
 }

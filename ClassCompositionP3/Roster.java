@@ -1,13 +1,14 @@
 
 public class Roster
 {
-    private Student[] students = new Student[3];
+    private Student[] studentslist;
 
     public Roster()
     {
-        students[0] = new Student("Hermione", "Granger", 11, 2188, 4.0, 4.0, 4.0, 4.0, 4.0);
-        students[1] = new Student("Harry", "Potter", 11, 2121, 3.0, 3.5, 3.5, 3.0, 3.0);
-        students[2] = new Student("Ron", "Weasley", 12, 1990, 2.0, 2.0, 2.5, 3.0, 2.5);
+        studentslist = new Student [3];
+        studentslist[0] = new Student("Kim", "Taeyeon", 11);
+        studentslist[1] = new Student("Glass", "Alisha", 11);
+        studentslist[2] = new Student("Kongyou", "Ajcharaporn", 12);
     }
 
     public String findStudentWithMaxGPA()
