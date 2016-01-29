@@ -1,8 +1,8 @@
 public class Student 
 {
     //instances 
-    private String first;
-    private String last;
+    public String first;
+    public String last;
     private double[] stdGrades = new double[5];
     private double English;
     private double Math;
@@ -26,7 +26,7 @@ public class Student
     }
 
     //multi arguments
-    public Student(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience,String LetterGPA)
+    public Student(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience, String LetterGPA)
     {
         this.first = new String(first);
         this.last = new String(last);
@@ -85,13 +85,17 @@ public class Student
         return avgGPA;
     }
 
+     public String lastname ()
+    {
+        return this.last;
+    }
+    
     public String toString()
     {
         String output = new String();
         output = "First Name: " + first + "\n" + 
                  "Last name: " + last + "\n" +
-                 "Avg GPA: " + CalcGPA()+ "\n" +
-                 "John's Grade " + avgGPA + "\n" + stdGrades[0] + " " + stdGrades[1] + " " + stdGrades[2] + " " + stdGrades[3] + " " + stdGrades[4];
+                 "Avg GPA: " + CalcGPA()+ "\n" ;
 
         return output;
 

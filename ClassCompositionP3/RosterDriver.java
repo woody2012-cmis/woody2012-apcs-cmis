@@ -1,8 +1,26 @@
 
-public class RosterDriver     {
+import javax.swing.JOptionPane;
+
+
+
+
+public class RosterDriver {
+
+
    public static void main (String argvs [] )
+
+
    {
-       Roster asdf = new Roster();
-       System.out.println ( asdf );        
+
+
+       Roster Student = new Roster();
+
+
+       System.out.println( Student );
+
+
    }
+
+
 }
+

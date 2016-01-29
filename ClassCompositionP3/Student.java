@@ -1,8 +1,8 @@
 public class Student 
 {
     //instances 
-    private String first;
-    private String last;
+    public String first;
+    public String last;
     private double[] stdGrades = new double[5];
     private double English;
     private double Math;
@@ -18,15 +18,15 @@ public class Student
         last = new String("Doe");
  
         stdGrades = new double[5];
-        stdGrades[0] = 4.0;
-        stdGrades[1] = 4.0;
-        stdGrades[2] = 4.0;
-        stdGrades[3] = 4.0;
-        stdGrades[4] = 4.0;
+        stdGrades[0] = 0.0;
+        stdGrades[1] = 0.0;
+        stdGrades[2] = 0.0;
+        stdGrades[3] = 0.0;
+        stdGrades[4] = 0.0;
     }
 
     //multi arguments
-    public Student(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience,String LetterGPA)
+    public Student(String first, String last,double English, double Math, double Science, double FineArts, double SocialScience, String LetterGPA)
     {
         this.first = new String(first);
         this.last = new String(last);
