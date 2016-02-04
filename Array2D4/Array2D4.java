@@ -1,48 +1,32 @@
-class Array2D4 {
-public static void main(String args[]) {
+import javax.swing.JOptionPane;
+public class Array2D4 
+{
+    public static void main(String args[]) 
+    {
+        String rwString = JOptionPane.showInputDialog("Enter a number");
+        String clString = JOptionPane.showInputDialog("Enter a number");
+        int rw = Integer.parseInt(rwString);
+        int cl = Integer.parseInt(clString);
+        int i = 0;
 
-    // Create an array that will hold the grid
-    char alphGrid[][] = genArray();
+        String[][] grid = new String [rw][cl];
+        String[] letters = new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
 
-    // Two for loops to print the grid on the screen
-    for(int i=0; i<26; i++) {
-
-        for(int j=0; j<26; j++) {
-            System.out.print(alphGrid[i][j] + "\t");
-        }
-        System.out.println("\n");
-    }
-
-} // end of main
-
-// Create a function to generate the grid
-public static char[][] genArray(){
-    char[][] arr = new char[26][26];
-
-    // Two for loops to generate the grid
-    for(int i = 0; i < 26; i++) {
-        for(int j = 0; j < 26; j++) {
-
-            // Creates an int that will later be cast to a char
-            int let = i + j;
-
-            // Keeps the int from getting too big
-            if(let >= 26)
-                let = let - 26;
-
-            // Add 65 to the int so that the char will return letters and not ASCII symbols
-            let = let + 65;
-
-            // Cast the int to a char
-            char letter = (char)let;
-
-            // Put the char into its respective place in the array
-            arr[i][j] = letter;
-
+        for(int row = 0; row < grid.length; row++) 
+        {
+            for(int col = 0; col < grid.length; col++)
+            {
+                grid[row][col] = letters[i];
+                System.out.print(grid[row][col] + "\t");
+                i++;
+                if (i == 26)
+                {
+                    i-=25;
+                    System.out.print(letters[i-1] + "\t");
+                }
+            }
+            System.out.println("\n");
         }
     }
 
-    // Returns the grid
-    return arr;
-}
 }
