@@ -29,11 +29,11 @@ public class Swapper
                     if (rowprod > rowHighestProd)
                     {
                         rowHighestProd = rowprod;
-
+                        rowOfHighestProd = row-6;
                     }
                 }
             }
-            rowprod = 1;
+            rowprod =1;
         }
 
         for(int col = 0; col < grid[0].length; col++)
@@ -45,8 +45,8 @@ public class Swapper
                     colprod *= grid[row][col];
                     if (colprod > colHighestProd)
                     {
-                        colHighestProd = colprod;
-
+                        colHighestProd = colprod;  
+                        colOfHighestProd = col-2;
                     }
                 }
             }
@@ -57,15 +57,14 @@ public class Swapper
         {
             for(int col = 0; col < grid[0].length; col++)
             {
-                if (grid[row][col] == grid[rowOfHighestProd][colOfHighestProd])
+                if (grid[row][col] == grid[colOfHighestProd][rowOfHighestProd])
                 {    
                     grid[row][col] = 0;
                 }
                 else if (grid[row][col] == 0)
                 {
-                    grid[row][col] = grid[rowOfHighestProd][colOfHighestProd];
+                    grid[row][col] = grid[colOfHighestProd][rowOfHighestProd];
                 }
-
             }
         }
 
