@@ -29,11 +29,11 @@ public class Swapper
                     if (rowprod > rowHighestProd)
                     {
                         rowHighestProd = rowprod;
-                        rowOfHighestProd = row-6;
+
                     }
                 }
             }
-            rowprod =1;
+
         }
 
         for(int col = 0; col < grid[0].length; col++)
@@ -46,11 +46,11 @@ public class Swapper
                     if (colprod > colHighestProd)
                     {
                         colHighestProd = colprod;  
-                        colOfHighestProd = col-2;
+
                     }
                 }
             }
-            colprod = 1;
+
         }
 
         for(int row = 0; row < grid.length; row++)
