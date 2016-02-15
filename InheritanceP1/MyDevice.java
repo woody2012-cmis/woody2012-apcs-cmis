@@ -17,8 +17,8 @@ public class MyDevice
     public String toString()
     {
         String output = new String();
-        output = "Memory:" + memory + "GB\n" +
-                 "Color:" + color;
+        output = "Memory: " + memory + "GB\n" +
+                 "Color: " + color;
         return output;
     }
 }
