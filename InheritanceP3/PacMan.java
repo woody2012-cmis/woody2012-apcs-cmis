@@ -1,9 +1,9 @@
-public class AsteriodMan extends SuperHero
+public class PacMan extends SuperHero
 {
     private String suitColor;
     private boolean hasCape;
     
-    public AsteriodMan()
+    public PacMan()
     {
         super();
     }
@@ -15,6 +15,6 @@ public class AsteriodMan extends SuperHero
 
     public String toString()
     {
-        return "AsteriodMan\t" + super.toString();
+        return "PacMan\t" + super.toString();
     }
 }

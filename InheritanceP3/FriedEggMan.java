@@ -1,20 +1,20 @@
-public class AsteriodMan extends SuperHero
+public class FriedEggMan extends SuperHero
 {
     private String suitColor;
     private boolean hasCape;
-    
-    public AsteriodMan()
+
+    public FriedEggMan()
     {
         super();
     }
 
     public String motto()
     {
-        return "To the universe";
+        return "Yummsy!";
     }
 
     public String toString()
     {
-        return "AsteriodMan\t" + super.toString();
+        return "FriedEggMan\t" + super.toString();
     }
 }
