@@ -2,8 +2,10 @@ public abstract class SuperHero
 {
     private String suitColor;
     private boolean hasCape;
-    
+
     public abstract String motto();
+
+    
 
     public SuperHero()
     {
@@ -30,5 +32,5 @@ public abstract class SuperHero
     {
         return hasCape;	
     } // end method isCaped
-    
+
 } // end abstract class SuperHero

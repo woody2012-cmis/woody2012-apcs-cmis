@@ -21,8 +21,7 @@ public class Array2D4
                 i++;
                 if (i == 26)
                 {
-                    i-=25;
-                    System.out.print(letters[i-1] + "\t");
+                    i-=26;
                 }
             }
             System.out.println("\n");
