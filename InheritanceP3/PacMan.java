@@ -18,3 +18,4 @@ public class PacMan extends SuperHero
         return "PacMan\t" + super.toString();
     }
 }
+

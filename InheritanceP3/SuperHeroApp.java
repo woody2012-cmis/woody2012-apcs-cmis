@@ -25,6 +25,6 @@ public class SuperHeroApp
         for ( SuperHero superhero : heroes )
         {
             System.out.println(superhero + "\n");
-        }     
+        }
     }
 }
