@@ -5,8 +5,6 @@ public abstract class SuperHero
 
     public abstract String motto();
 
-    
-
     public SuperHero()
     {
         this.suitColor = new String();

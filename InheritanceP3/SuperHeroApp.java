@@ -26,5 +26,17 @@ public class SuperHeroApp
         {
             System.out.println(superhero + "\n");
         }
+        
+        for( int row = 0; row < SuperHero.length; row++ )
+        {
+            for(int col = 0; col < SuperHero[0].length; col++ )
+            {
+                if( SuperHero[row][col].rating == rating )
+                {
+                    songs.add(SuperHero[row][col]);
+                }
+            }
+        }
+        
     }
 }
