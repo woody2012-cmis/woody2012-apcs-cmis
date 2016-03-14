@@ -1,16 +1,16 @@
-public class FriedEggMan extends SuperHero
+public class AsteroidMan extends SuperHero
 {
     private String suitColor;
     private boolean hasCape;
 
-    public FriedEggMan()
+    public AsteroidMan()
     {
         super();
     }
 
     public String motto()
     {
-        return "Yummsy!";
+        return "To the universe";
     }
 
     public String toString()

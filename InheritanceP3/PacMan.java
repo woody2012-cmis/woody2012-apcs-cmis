@@ -15,7 +15,7 @@ public class PacMan extends SuperHero
 
     public String toString()
     {
-        return "PacMan\t" + super.toString();
+        return super.toString();
     }
 }
 
