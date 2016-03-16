@@ -3,29 +3,29 @@ public class SuperHeroDriver
 {
     public static void main(String[] args)
     {
-        AsteroidMan asteroidman = new AsteroidMan();
+        AsteroidMan asteriodman = new AsteroidMan();
         FriedEggMan friedeggman = new FriedEggMan();
         PacMan pacman = new PacMan();
-
-        asteroidman.setSuitColor("Purple");
+        
+        asteriodman.setSuitColor("Purple");
         friedeggman.setSuitColor("Yellow");
         pacman.setSuitColor("Blue");
         
-        asteroidman.setCape(false);
+        asteriodman.setCape(false);
         friedeggman.setCape(true);
         pacman.setCape(false);
-
-        asteroidman.setName("AsteroidMan");
+        
+        asteriodman.setName("AsteroidMan");
         friedeggman.setName("FriedEggMan");
         pacman.setName("PacMan");
 
         ArrayList<SuperHero> heroes = new ArrayList<SuperHero>();
-        heroes.add(asteroidman);
+        heroes.add(asteriodman);
         heroes.add(friedeggman);
         heroes.add(pacman);
         SuperHero[][] capedHeroes = new SuperHero[3][3];
         int i = 0;
-        
+
         System.out.println("\nOriginal set of ArrayList heroes...");
         for(SuperHero eachHero: heroes)
         {
@@ -50,9 +50,8 @@ public class SuperHeroDriver
                 }
             }
         }
-
+        
         System.out.println("\nPrinting 2D Array capedHeroes...");
-
         for(int row = 0; row < capedHeroes.length; row++)
         {
             for(int col = 0; col < capedHeroes[0].length; col++)
@@ -66,12 +65,12 @@ public class SuperHeroDriver
                     System.out.print(capedHeroes[row][col] + "\t");
                 }
                 i++;
+
             }
             System.out.println();
         }
         
         System.out.println("\nPrinting contents of capedHeroes...");
-
         for(int row = 0; row < capedHeroes.length; row++)
         {
             for(int col = 0; col < capedHeroes[0].length; col++)
@@ -86,7 +85,6 @@ public class SuperHeroDriver
         }
         
         System.out.println("\nRemaining set of ArrayList heroes...");
-
         for(SuperHero eachHero: heroes)
         {
             System.out.println(eachHero);

@@ -11,12 +11,12 @@ public class UnderGrad extends Student
 
     public int calculateTuition(int units) 
     {
-        return units * 250; // in dollars
+        return units * 250; 
     }
 
     public String toString()
     {
-        return super.toString();
+        return super.toString() + calculateTuition(getUnits());
     }
 }
 

@@ -12,12 +12,12 @@ public class PostGraduate extends Student
 
     public int calculateTuition(int units) 
     {
-        return units * 750; // in dollars
+        return units * 750; 
     }
 
     public String toString()
     {
-        return super.toString();
+        return super.toString() + calculateTuition(getUnits());
     }
 }
 

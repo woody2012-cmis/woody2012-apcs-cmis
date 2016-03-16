@@ -15,7 +15,7 @@ public class Graduate extends Student
 
     public String toString()
     {
-        return super.toString();
+        return super.toString() + calculateTuition(getUnits());
     }
 }
 
