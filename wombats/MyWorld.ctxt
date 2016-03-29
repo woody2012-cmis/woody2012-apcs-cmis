@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MyWorld
+comment0.text=\n\ A\ world\ where\ persons\ live.\n\ \n\ @author\ Michael\ Kolling\n\ @version\ 1.0.1\n
+comment1.params=
+comment1.target=MyWorld()
+comment1.text=\n\ Create\ a\ new\ world\ with\ 8x8\ cells\ and\n\ with\ a\ cell\ size\ of\ 60x60\ pixels\n
+numComments=2

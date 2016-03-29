@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Person
+comment0.text=\n\ Person.\ A\ Person\ moves\ forward\ until\ it\ can't\ do\ so\ anymore,\ at\n\ which\ point\ it\ turns\ left.\ If\ a\ person\ finds\ a\ drop,\ it\ eats\ it.\n\ \n\ @author\ Michael\ Kolling\n\ @version\ 1.0.1\n
+comment1.params=
+comment1.target=Person()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=boolean\ hitDrop()
+comment3.text=\n\ Check\ whether\ there\ is\ a\ drop\ in\ the\ same\ cell\ as\ we\ are.\n
+comment4.params=
+comment4.target=void\ eatDrop()
+comment4.text=\n\ Eat\ a\ drop.\n
+numComments=5
