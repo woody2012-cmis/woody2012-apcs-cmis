@@ -3,10 +3,7 @@ import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
 import java.util.Random;
 
 /**
- * A world where persons live.
- * 
- * @author Michael Kolling
- * @version 1.0.1
+ * A world where persons li
  */
 public class MyWorld extends World
 {

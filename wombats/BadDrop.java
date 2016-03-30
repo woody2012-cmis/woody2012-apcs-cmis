@@ -1,11 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-
-/**
- * Leaf - a class for representing leafs.
- *
- * @author Michael Kolling
- * @version 1.0.1
- */
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 public class BadDrop extends Actor
 {
     public BadDrop()
