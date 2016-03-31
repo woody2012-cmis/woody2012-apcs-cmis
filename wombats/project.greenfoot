@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Mar 30 12:49:22 ICT 2016
+#Thu Mar 31 11:22:40 ICT 2016
 target4.type=ClassTarget
 dependency3.from=WombatWorld
 target3.height=50
@@ -70,7 +70,7 @@ mainWindow.height=657
 target2.showInterface=false
 editor.swing.0.height=0
 target3.name=MyWorld
-class.MyWorld.image=game_background_the_park_by_amazingtrout-d6bwtzq.jpg
-target3.width=90
 project.charset=UTF-8
+target3.width=90
+class.MyWorld.image=game_background_the_park_by_amazingtrout-d6bwtzq.jpg
 target4.showInterface=false

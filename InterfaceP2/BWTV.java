@@ -2,11 +2,8 @@
 public class BWTV extends TV implements Analog
 {
     public BWTV()
-
     {
-
         super();
-
     }
 
     public String rotateRabbitEars()
@@ -15,11 +12,7 @@ public class BWTV extends TV implements Analog
     }
 
     public String tvType()
-
     {
-
         return "I'm a black and white TV";
-
     }
-
 }
