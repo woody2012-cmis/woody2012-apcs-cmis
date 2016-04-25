@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-public class Drop extends FallingObjects
+public class FallingObjects extends Actor
 {
-    public Drop()
+    public FallingObjects()
     {
         
     }
