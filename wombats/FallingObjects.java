@@ -1,22 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 public class FallingObjects extends Actor
 {
-    public FallingObjects()
-    {
-        
-    }
     
+
     public void act()
     {
-        fall();
-        remove();
+        
+            fall();
+            remove();
+        
     }
-    
+
     public void fall()
     {
-        setLocation(getX(), getY()+1);
+        setLocation(getX(), getY()+1);                                                                                                                                                  
     }
-    
+
     public void remove()
     {
         MyWorld world = (MyWorld)getWorld();

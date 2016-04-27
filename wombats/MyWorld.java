@@ -74,4 +74,31 @@ public class MyWorld extends World
         Drop drop = new Drop();
         addObject(drop,113,176);
     }
+
+    private int time = 1;
+    private int count = 1;
+    public void act() 
+    {
+        if(time == 0)
+        {
+            BadDrop r1 = new BadDrop();
+            addObject(r1, (int)(Math.random()*400) + 1, 0);
+            time = 20;
+            count = 1;
+        }
+        if(counter())
+        {
+            time--;
+            count = 1;
+        }
+    }    
+
+    private boolean counter()
+    {
+        if(count > 0)
+        {
+            count--;
+        }
+        return count == 0;
+    }
 }

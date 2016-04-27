@@ -3,20 +3,19 @@ public class Drop extends FallingObjects
 {
     public Drop()
     {
-        
+        super();
     }
-    
+
     public void act()
     {
-        fall();
-        remove();
+
     }
-    
+
     public void fall()
     {
         setLocation(getX(), getY()+1);
     }
-    
+
     public void remove()
     {
         MyWorld world = (MyWorld)getWorld();
