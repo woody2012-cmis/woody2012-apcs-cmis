@@ -8,8 +8,7 @@ public class BadDrop extends FallingObjects
 
     public void act()
     {
-
-        
+        fall();
     }
     
     public void fall()
@@ -20,9 +19,10 @@ public class BadDrop extends FallingObjects
     public void remove()
     {
         MyWorld world = (MyWorld)getWorld();
+        Actor baddrop= new BadDrop();
         if(getY() >= world.getHeight() -5)
         {
-            world.removeObject(this);
+            world.removeObject(baddrop);
         }
     }
 }

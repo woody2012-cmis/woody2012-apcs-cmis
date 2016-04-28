@@ -27,16 +27,16 @@ public class Person extends Actor
         {
             move(3);
         }
-        setRotation(90);
-        if (Greenfoot.isKeyDown("up"))
-        { 
-            move(-4);
-        }
-        if (Greenfoot.isKeyDown("down"))
-        { 
-            move(4); 
-        }
-        setRotation(0);
+        // setRotation(90);
+        // if (Greenfoot.isKeyDown("up"))
+        // { 
+            // move(-4);
+        // }
+        // if (Greenfoot.isKeyDown("down"))
+        // { 
+            // move(4); 
+        // }
+        // setRotation(0);
         if (hitDrop())
         {
             eatDrop();

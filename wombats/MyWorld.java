@@ -75,30 +75,45 @@ public class MyWorld extends World
         addObject(drop,113,176);
     }
 
-    private int time = 1;
+    private int shorttime = 1;
+    private int longtime = 0;
+    
     private int count = 1;
     public void act() 
     {
-        if(time == 0)
+        if(longtime==0)
         {
-            BadDrop r1 = new BadDrop();
-            addObject(r1, (int)(Math.random()*400) + 1, 0);
-            time = 20;
+            BadDrop d1 = new BadDrop();
+            addObject(d1, (int)(Math.random()*400) + 1, 0);
+            longtime = 1200;
             count = 1;
         }
-        if(counter())
+        if(true)
         {
-            time--;
+            longtime--;
             count = 1;
         }
+        if(shorttime==1)
+        {
+            Drop d1 = new Drop();
+            addObject(d1, (int)(Math.random()*400) + 1, 0);
+            shorttime = 200;
+            count = 1;
+        }
+        if(true)
+        {
+            shorttime--;
+            count = 1;
+        }
+        
     }    
 
     private boolean counter()
     {
-        if(count > 0)
+        if(count > 0)//count==1
         {
-            count--;
+            count--; //count becomes0
         }
-        return count == 0;
+        return count == 0; //count is 0 which is true threfore statement is true
     }
 }

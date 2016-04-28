@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=FallingObjects
 comment1.params=
-comment1.target=void\ act()
+comment1.target=FallingObjects()
 comment2.params=
-comment2.target=void\ fall()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ remove()
+comment3.target=void\ fall()
 numComments=4
