@@ -73,6 +73,14 @@ public class MyWorld extends World
         person.setLocation(215,478);
         Drop drop = new Drop();
         addObject(drop,113,176);
+        removeObject(drop);
+        removeObject(baddrop);
+        Drop drop2 = new Drop();
+        addObject(drop2,277,25);
+        BadDrop baddrop2 = new BadDrop();
+        addObject(baddrop2,120,22);
+        removeObject(drop2);
+        removeObject(baddrop2);
     }
 
     private int shorttime = 1;

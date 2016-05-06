@@ -12,8 +12,6 @@ public class FallingObjects extends Actor
         
     }
 
-    
-
     public void fall()
     {
         setLocation(getX(), getY()+1);                                                                                                                                                  
