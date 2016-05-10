@@ -9,7 +9,6 @@ public class FallingObjects extends Actor
     public void act()
     {
         fall();
-        
     }
 
     public void fall()

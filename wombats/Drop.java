@@ -9,6 +9,7 @@ public class Drop extends FallingObjects
     public void act()
     {
         fall();
+        remove();
     }
 
     public void fall()
@@ -18,11 +19,9 @@ public class Drop extends FallingObjects
 
     public void remove()
     {
-        Actor drop= new Drop();
-        MyWorld world = (MyWorld)getWorld();
-        if(getY() >= world.getHeight() -5)
+        if(getY() >=  getWorld().getHeight() -5)
         {
-            world.removeObject(drop);
+            getWorld().removeObject(this);
         }
     }
 }
