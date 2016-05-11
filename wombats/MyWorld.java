@@ -7,6 +7,7 @@ import java.util.Random;
  */
 public class MyWorld extends World
 {
+    Counter counter = new Counter ();
     /**
      * Create a new world with 8x8 cells and
      * with a cell size of 60x60 pixels
@@ -17,12 +18,18 @@ public class MyWorld extends World
         prepare();
     }
 
+    public Counter getCounter()
+    {
+        return counter;
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
+        addObject(counter, 100, 40);
         BadDrop baddrop = new BadDrop();
         addObject(baddrop,230,56);
         Person person = new Person();
