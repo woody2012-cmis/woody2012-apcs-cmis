@@ -24,8 +24,8 @@ public class Drop extends FallingObjects
             World myWorld = getWorld();
             getWorld().removeObject(this);
             MyWorld myworld = (MyWorld)myWorld;
-            Counter counter = myworld.getCounter();
-            counter.addScore();
+            Score counter = myworld.getCounter();
+            
         }
     }
 }
