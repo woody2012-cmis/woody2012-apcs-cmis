@@ -11,7 +11,7 @@ public class Score extends Actor
      */
     public void act()
     {
-        int score = ((Person) getWorld().getObjects(Person.class).get(0)).getScore();
+        // int score = ((Person) getWorld().getObjects(Person.class).get(0)).getScore();
         setImage(new GreenfootImage("Score : " + score, 24, Color.GREEN, Color.BLACK));
     }
     

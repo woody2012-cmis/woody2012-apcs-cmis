@@ -33,11 +33,8 @@ public class Person extends Actor
         if (hitDrop())
         {
             eatDrop();
-            
-            
         }
-        
-         eatDrop();
+        eatDrop();
     }
 
     public boolean hitDrop()
@@ -65,17 +62,14 @@ public class Person extends Actor
         if(drop != null || baddrop != null)
         {
             // eat the drop...
-            
             getWorld().removeObject(drop);
             getWorld().removeObject(baddrop);
-            score = score + 1;
-      
-        
+            // score = score + 1;        
         }
     }
     
-    public int getScore()
-       {
-        return score;    
-       }
+    // public int getScore()
+       // {
+        // return score;    
+       // }
 }
