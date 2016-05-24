@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class MyWorld extends World
 {
-    Score score = new Score();
+    Counter counter = new Counter();
     /**
      * Create a new world with 8x8 cells and
      * with a cell size of 60x60 pixels
@@ -18,9 +18,9 @@ public class MyWorld extends World
         prepare();
     }
 
-    public Score getScore()
+    public Counter getCounter()
     {
-        return score;
+        return counter;
     }
     
     /**
@@ -29,7 +29,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        addObject(score, 100, 40);
+        addObject(counter, 100, 40);
         BadDrop baddrop = new BadDrop();
         addObject(baddrop,230,56);
         Person person = new Person();

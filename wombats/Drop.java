@@ -22,9 +22,10 @@ public class Drop extends FallingObjects
         if(getY() >=  getWorld().getHeight() -5)
         {
             World myWorld = getWorld();
-            getWorld().removeObject(this);
-            // MyWorld myworld = (MyWorld)myWorld;
-            // Score counter = myworld.getCounter();
+            myWorld.removeObject(this);
+            MyWorld world = (MyWorld)myWorld;
+            Counter counter = world.getCounter();
+            counter.subtractScore();
             
         }
     }

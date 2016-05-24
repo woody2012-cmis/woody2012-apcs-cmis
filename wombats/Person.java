@@ -23,11 +23,11 @@ public class Person extends Actor
         // setRotation(90);
         // if (Greenfoot.isKeyDown("up"))
         // { 
-            // move(-4);
+        // move(-4);
         // }
         // if (Greenfoot.isKeyDown("down"))
         // { 
-            // move(4); 
+        // move(4); 
         // }
         // setRotation(0);
         if (hitDrop())
@@ -59,17 +59,33 @@ public class Person extends Actor
     {
         Actor drop = getOneObjectAtOffset(0, 0, Drop.class);
         Actor baddrop = getOneObjectAtOffset(0, 0, BadDrop.class);
-        if(drop != null || baddrop != null)
+        if(drop != null  )//if hit straw
         {
-            // eat the drop...
-            getWorld().removeObject(drop);
-            getWorld().removeObject(baddrop);
-            // score = score + 1;        
+            World myWorld = getWorld();
+            myWorld.removeObject(drop);
+            MyWorld world = (MyWorld)myWorld;
+            Counter counter = world.getCounter();
+            counter.addScore();
+        }
+        else if (baddrop != null)//if hit baddrop
+        {
+            World myWorld = getWorld();
+            myWorld.removeObject(baddrop);
+            MyWorld world = (MyWorld)myWorld;
+            Counter counter = world.getCounter();
+            counter.baddropScore();
         }
     }
-    
-    // public int getScore()
-       // {
-        // return score;    
-       // }
+
+    public void GameOver()
+    {
+        if (counter.getScore() < 0)
+        {
+            GameOver gameover= new GameOver();
+            World myWorld = getWorld();
+            myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+            Greenfoot.stop();
+        }
+    }
 }
+
