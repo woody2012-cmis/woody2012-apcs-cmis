@@ -77,15 +77,15 @@ public class Person extends Actor
         }
     }
 
-    public void GameOver()
-    {
-        if (counter.getScore() < 0)
-        {
-            GameOver gameover= new GameOver();
-            World myWorld = getWorld();
-            myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
-            Greenfoot.stop();
-        }
-    }
+    // public void GameOver()
+    // {
+        // if (Score < 0)
+        // {
+            // GameOver gameover= new GameOver();
+            // World myWorld = getWorld();
+            // myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+            // Greenfoot.stop();
+        // }
+    // }
 }
 

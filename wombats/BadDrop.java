@@ -22,8 +22,7 @@ public class BadDrop extends FallingObjects
         if(getY() >=  getWorld().getHeight() -5)
         {
             World myWorld = getWorld();
-            myWorld.removeObject(this);
-     
+            myWorld.removeObject(this);  
         }
     }
 }

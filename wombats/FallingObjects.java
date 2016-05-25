@@ -1,6 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 public class FallingObjects extends Actor
 {
+
+  
+
     public FallingObjects()
     {
 
@@ -14,5 +17,12 @@ public class FallingObjects extends Actor
     public void fall()
     {
         setLocation(getX(), getY()+1);                                                                                                                                                  
+    }
+
+    private int speed;// = the starting speed of your lobster;
+
+    public void incrementSpeed(int speed)
+    {
+        this.speed += speed;
     }
 }

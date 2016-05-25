@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.target=Counter
-comment1.params=
-comment1.target=void\ act()
+comment1.params=speed
+comment1.target=void\ increaseSpeed(int)
 comment2.params=
-comment2.target=void\ addScore()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ subtractScore()
+comment3.target=void\ addScore()
 comment4.params=
-comment4.target=void\ baddropScore()
-numComments=5
+comment4.target=void\ subtractScore()
+comment5.params=
+comment5.target=void\ baddropScore()
+comment6.params=
+comment6.target=int\ getScore()
+comment7.params=
+comment7.target=void\ GameOver()
+numComments=8
