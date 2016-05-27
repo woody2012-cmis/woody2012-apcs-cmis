@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*; 
 import java.util.List;
 import java.util.ArrayList;
 public class Person extends Actor
@@ -20,16 +20,6 @@ public class Person extends Actor
         {
             move(3);
         }
-        // setRotation(90);
-        // if (Greenfoot.isKeyDown("up"))
-        // { 
-        // move(-4);
-        // }
-        // if (Greenfoot.isKeyDown("down"))
-        // { 
-        // move(4); 
-        // }
-        // setRotation(0);
         if (hitDrop())
         {
             eatDrop();
@@ -76,16 +66,5 @@ public class Person extends Actor
             counter.baddropScore();
         }
     }
-
-    // public void GameOver()
-    // {
-        // if (Score < 0)
-        // {
-            // GameOver gameover= new GameOver();
-            // World myWorld = getWorld();
-            // myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
-            // Greenfoot.stop();
-        // }
-    // }
 }
 

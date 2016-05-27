@@ -4,7 +4,6 @@ public class Counter extends Actor
 {
     int score = 0;
     int speed = 5;
-
     public void increaseSpeed(int speed)
     {
         if (score == 10)

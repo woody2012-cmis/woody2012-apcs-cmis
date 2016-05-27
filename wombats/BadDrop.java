@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;
 public class BadDrop extends FallingObjects
 {
     public BadDrop()

@@ -1,10 +1,5 @@
-import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
-
+import greenfoot.*; 
 import java.util.Random;
-
-/**
- * A world where persons li
- */
 public class MyWorld extends World
 {
     Counter counter = new Counter();
@@ -22,11 +17,7 @@ public class MyWorld extends World
     {
         return counter;
     }
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
+
     private void prepare()
     {
         addObject(counter, 100, 40);
@@ -49,7 +40,6 @@ public class MyWorld extends World
 
     private int shorttime = 1;
     private int longtime = 0;
-    
     private int count = 1;
     public void act() 
     {
@@ -77,7 +67,6 @@ public class MyWorld extends World
             shorttime--;
             count = 1;
         }
-        
     }    
 
     private boolean counter()

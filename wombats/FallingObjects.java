@@ -1,26 +1,16 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-public class FallingObjects extends Actor
+import greenfoot.*; 
+public abstract  class FallingObjects extends Actor
 {
-
-  
-
-    public FallingObjects()
-    {
-
-    }
-
     public void act()
     {
-        fall();
+
     }
-
-    public void fall()
-    {
-        setLocation(getX(), getY()+1);                                                                                                                                                  
-    }
-
-    private int speed;// = the starting speed of your lobster;
-
+    
+    public abstract void fall();
+    
+    public abstract void remove();
+    
+    private int speed;
     public void incrementSpeed(int speed)
     {
         this.speed += speed;
