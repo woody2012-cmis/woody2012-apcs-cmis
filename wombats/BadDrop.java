@@ -8,13 +8,14 @@ public class BadDrop extends FallingObjects
 
     public void act()
     {
-        fall();
+        fall(); 
         remove();
+        
     }
 
     public void fall()
     {
-        setLocation(getX(), getY()+1);
+        super.fall();
     }
 
     public void remove()

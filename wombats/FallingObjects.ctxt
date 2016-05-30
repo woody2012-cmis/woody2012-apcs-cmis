@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=void\ remove()
 comment4.params=speed
 comment4.target=void\ incrementSpeed(int)
-numComments=5
+comment5.params=
+comment5.target=void\ increaseSpeed()
+numComments=6

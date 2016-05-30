@@ -7,4 +7,9 @@ public class Score extends Actor
     {
         setImage(new GreenfootImage("Score : " + score, 24, Color.GREEN, Color.BLACK));
     }
+    
+    public int getScore()
+    {
+        return score;
+    }
 }
