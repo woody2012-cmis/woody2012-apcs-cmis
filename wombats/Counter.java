@@ -42,10 +42,13 @@ public class Counter extends Actor
     {
         if (score < 0)
         {
-            GameOver gameover= new GameOver();
-            World myWorld = getWorld();
-            myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
-            Greenfoot.stop();
+            for (int i = 0; i <= 0; i++)
+            {
+                GameOver gameover= new GameOver();
+                World myWorld = getWorld();
+                myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+                Greenfoot.stop();
+            }
         }
     }
 }
