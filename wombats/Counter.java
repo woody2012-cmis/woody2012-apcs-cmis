@@ -40,7 +40,7 @@ public class Counter extends Actor
 
     public void GameOver()
     {
-        if (score < 0)
+        while (score < 0)
         {
             for (int i = 0; i <= 0; i++)
             {
