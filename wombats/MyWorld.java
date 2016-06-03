@@ -41,12 +41,26 @@ public class MyWorld extends World
     private int shorttime = 1;
     private int longtime = 0;
     private int count = 1;
+
+    FallingObjects a = new Drop();
+    FallingObjects b = new Drop1();
+    FallingObjects c = new BadDrop();
+    FallingObjects d = new BadDrop1();
     public void act() 
     {
+        FallingObjects[] drop = {a,b};
+        FallingObjects[] drop1 = {c,d};
         if(longtime==0)
         {
             BadDrop d1 = new BadDrop();
             addObject(d1, (int)(Math.random()*400) + 1, 0);
+            longtime = 1200;
+            count = 1;
+        }
+        if(longtime==0)
+        {
+            BadDrop d2 = new BadDrop();
+            addObject(d2, (int)(Math.random()*400) + 1, 0);
             longtime = 1200;
             count = 1;
         }
@@ -62,12 +76,56 @@ public class MyWorld extends World
             shorttime = 200;
             count = 1;
         }
+        if(shorttime==1)
+        {
+            Drop d2 = new Drop();
+            addObject(d2, (int)(Math.random()*400) + 1, 0);
+            shorttime = 200;
+            count = 1;
+        }
         if(true)
         {
             shorttime--;
             count = 1;
         }
     }    
+    // Strawberry a = new Strawberry();
+    // iceCream    b = new Vanilla();
+    // iceCream  c = new Chocalate();
+    // Garbage e = new onion();
+    // Garbage f = new bananaPeal();
+    // Garbage g = new Hamburger();
+    // public void act() 
+    // {
+
+    // iceCream[] drop = {a,b,c,a,b,c};
+    // Garbage[] drop1={e,f,g,e,f,g};
+
+    // if(time2 == 0)
+    // {
+
+    // addObject(drop[(int)(Math.random()*6)], ((int) (Math.random( )*500))+60,10);
+    // time2 = 55;
+    // count2 = 100;
+    // }
+    // if(time3 == 0)
+    // {
+    // addObject(drop1[(int)(Math.random()*6)], ((int) (Math.random( )*500))+60,10);
+    // time3 = 35;
+    // count3 = 50;
+    // }
+
+    // if(counter())
+    // {
+    // time--;
+    // count = 1;
+    // time2--;
+    // count2 = 1;
+    // time3--;
+    // count3 = 1;
+    // }
+
+    // }    
 
     private boolean counter()
     {
